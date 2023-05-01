@@ -31,8 +31,11 @@ How we can implement multi language supportive in React js
     
     ===inside component function=== Header
     
+    
 const { i18n } = useTranslation();
+
 const { t } = useTranslation();
+
   React.useEffect(() => {
       setTimeout(() => {
       if (
@@ -47,32 +50,45 @@ const { t } = useTranslation();
    
   }, []);
   
+  
   =======click event when langauge will be changed========
+  
           const changeLanguage = (e, value) => {
           localStorage.setItem("lancode", value);
           i18n.changeLanguage(value);
         };
         
  ========= map all component with i18==========
+ 
  import { useTranslation, withTranslation } from "react-i18next";
  
+ 
   ===inside component function===
+  
  const { t } = useTranslation();
  
+ 
  ====== inside render funciton function ==========
+ 
  <h2>{t("firstTimeLogin.label")}</h2>
  
+ 
  ====    export any react component with i18n ====
+ 
  export default withTranslation()(AddUserSelection);
  
+ 
 ** 5. dynamic language change with api response data...**
+
 
 {lancode === "th" && (
 <>{items.myNameTH}</>
 )}
+
 {lancode === "en" && (
 <>{items.myNameEN}</>    
 )}
+
 <!-- myNameEN, myNameTH is a api response onject name -->
  
 
