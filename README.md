@@ -13,17 +13,24 @@ How we can implement multi language supportive in React js
 
 
 **2. Create tranlastion object in below location**
+
      ===public\assets\i18n\translations\en.json====
+     
       ===public\assets\i18n\translations\th.json==== 
+      
           {
            "phoneno.label": "Phone number",
           }
 **3. create same file as i18.js which is available in this project**
 
+
 **4. How to create a connection between React component and i18n translatior**
+
     import { useTranslation } from "react-i18next";
     
+    
     ===inside component function=== Header
+    
 const { i18n } = useTranslation();
 const { t } = useTranslation();
   React.useEffect(() => {
