@@ -4,9 +4,13 @@ How we can implement multi language supportive in React js
 **1. install below packages**
 
 "i18next": "^15.0.9",
+
 "i18next-browser-languagedetector": "^3.0.1",
+
 "i18next-xhr-backend": "^3.0.1",
+
 "react-i18next": "^11.7.4",
+
 
 **2. Create tranlastion object in below location**
      ===public\assets\i18n\translations\en.json====
