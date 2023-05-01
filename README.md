@@ -36,16 +36,22 @@ const { i18n } = useTranslation();
 
 const { t } = useTranslation();
 
+
   React.useEffect(() => {
+  
       setTimeout(() => {
+      
       if (
         localStorage.getItem("lancode") &&
         localStorage.getItem("lancode") !== ""
       ) {
+      
       } else {
+      
         localStorage.setItem("lancode", "th");
         i18n.changeLanguage("th");
       }
+      
     }, 2000);
    
   }, []);
